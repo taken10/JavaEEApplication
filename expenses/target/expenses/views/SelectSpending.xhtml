@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>支出表示月選択画面</title>
+
+<script type="text/javascript">
+	function check() {
+		var flag = 0;
+		// 設定開始
+		if (document.selectday.implementationDay.value == "") { // 「収支日」の入力をチェック
+			flag = 1;
+		}
+		// 設定終了
+		if (flag) {
+			window.alert('[表示年月日]欄が未入力です'); // 入力漏れがあれば警告ダイアログを表示
+			return false; // 送信を中止
+		} else {
+			return true; // 送信を実行
+		}
+	}
+</script>
+</head>
+<body>
+	<h2>支出表示月選択画面</h2>
+	<form name="selectday" action="/expenses/rest/data/getspending"
+		method="post" onSubmit="return check()">
+		<p>
+			表示年月日選択(yyyy/MM/dd)： <input type="date" id="implementationDay"
+				name="implementationDay" value="showDay" />
+		</p>
+		<input type="submit" value="表示" />
+	</form>
+	<form action="/expenses/rest/data/back" method="get">
+		<input type="submit" value="TOPに戻る" />
+	</form>
+</body>
+</html>

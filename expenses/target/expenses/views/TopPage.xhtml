@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>TOPページ</title>
+</h:head>
+<h:body>
+	<h2>TOPページ</h2>
+	<form action="/expenses/rest/data/alldata" method="get">
+		<input type="submit" value="収支履歴一覧" />
+	</form>
+<br/>
+	<form action="/expenses/rest/data/selectspending" method="get">
+		<input type="submit" value="各月支出" />
+	</form>
+<br/><br/>
+	<form action="/expenses/rest/data/addmoney" method="get">
+		<input type="submit" value="入金" />
+	</form>
+<br/>
+	<form action="/expenses/rest/data/addhistory" method="get">
+		<input type="submit" value="収支履歴追加" />
+	</form>
+</h:body>
+</html>

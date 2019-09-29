@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>結果画面</title>
+</h:head>
+<h:body>
+	<h2>結果画面</h2>
+	以下の履歴を登録しました<br/>
+	収入 / 出費：<br/>
+	<h:outputText value = "#{outputHistoryDataBean.inOut}" /><br/><br/>
+	金額：<br/>
+	<h:outputText value = "#{outputHistoryDataBean.price}" /><br/><br/>
+	収支日：<br/>
+	<h:outputText value = "#{outputHistoryDataBean.implementationDay}" /><br/><br/>
+	残金：<br/>
+	<h:outputText value = "#{outputDepositBean.deposit}" /><br/><br/>
+
+	<form action="/expenses/rest/data/back" method="get">
+		<input type="submit" value="TOPに戻る" />
+	</form>
+</h:body>
+</html>

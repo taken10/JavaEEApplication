@@ -1,0 +1,12 @@
+bean\HistoryBeanList.class
+expenses\web\ApplicationConfig.class
+bean\OutputDepositBean.class
+model\Balance.class
+bean\DepositBean.class
+model\MonthlyHistory.class
+bean\OutputHistoryDataBean.class
+bean\HistoryDataBean.class
+model\History.class
+bean\OutputHistoryDataBean2.class
+expenses\web\ExpensesResource.class
+ejb\ExpensesEjb.class

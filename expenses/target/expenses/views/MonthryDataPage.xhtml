@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>月ごとの出費</title>
+</h:head>
+<h:body>
+	<h2>月ごとのカテゴリー別出費ページ</h2>
+	<h:dataTable var="monthlylist" value="#{historyBean.monthlylist}" border="1"
+		cellpadding="2" cellspacing="0">
+
+		<h:column>
+			<f:facet name="header">支出額</f:facet>
+                #{monthlylist[0]} 円
+            </h:column>
+		<h:column>
+			<f:facet name="header">カテゴリー</f:facet>
+                #{monthlylist[1]}
+            </h:column>
+	</h:dataTable>
+
+	<p>
+		残金：
+		<h:outputText value="#{outputDepositBean.deposit}" />
+		円
+	</p>
+	<form action="/expenses/rest/data/back" method="get">
+		<input type="submit" value="TOPに戻る" />
+	</form>
+</h:body>
+</html>
